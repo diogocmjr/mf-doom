@@ -1,16 +1,23 @@
 const game = new Game();
+let mode;
 
 function preload() {
     game.preload();
 }
 
 function setup() {
-    createCanvas(900, 600)
+    mode = 0;
+    createCanvas(1000, 600)
     game.setup();
 }
 function draw() {
     game.draw();
 }
+
+function pauseGame() {
+    game.draw = !game.draw;
+}
+
 function keyPressed() {
     if (keyCode === 40) {
         game.player.moveUp();
@@ -23,5 +30,11 @@ function keyPressed() {
     }
     if (keyCode === 37) {
         game.player.moveLeft();
+    }
+    if (keyCode === 13) {
+        mode = 1;
+    }
+    if (keyCode === 80) {
+        mode = 2;
     }
 }

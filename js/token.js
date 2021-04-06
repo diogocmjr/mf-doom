@@ -2,13 +2,13 @@ class Token {
     constructor(image) {
         this.image = image;
         this.x = width;
-        this.y = (Math.random() * height) / 1.1; // => 1.5 distributes obstacles more than if it was 3
-        this.width = 60;
-        this.height = 60;
+        this.y = (Math.random() * height + 100); // => 1.5 distributes obstacles more than if it was 3
+        this.width = 55;
+        this.height = 55;
     }
 
     collision(playerInfo) {
-        console.log('token', playerInfo);
+        // console.log('token', playerInfo);
         const tokenX = this.x + this.width / 2;
         const tokenY = this.y + this.height / 2;
         const playerX = playerInfo.x + playerInfo.width / 2;
@@ -16,7 +16,7 @@ class Token {
     
 
     // then use the P5 function dist() to calculate the distance
-        if (dist(tokenX, tokenY, playerX, playerY) > 100) {
+        if (dist(tokenX, tokenY, playerX, playerY) > 97) {
             return false;
         } else {
             game.player.score += 10;
