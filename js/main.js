@@ -35,7 +35,6 @@ function keyPressed() {
     if (keyCode === 13) {
         mode = 1;
         game.mainSound.play();
-
     }
     if (keyCode === 80) {
         mode = 2;

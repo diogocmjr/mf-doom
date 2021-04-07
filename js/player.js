@@ -35,22 +35,24 @@ class Player {
     }
 
     moveUp() {
-        this.y -= 3;
+        this.y -= 4;
     }
     moveDown() {
-        this.y += 3;
+        this.y += 4;
     }
     moveRight() {
-        this.x += 3;
+        this.x += 4;
     }
     moveLeft() {
-        this.x -= 3;
+        this.x -= 4;
     }
 
     gameOver() {
         if (game.player.lives.length < 1) {
             // console.log('game is over')
             game.mainSound.pause();
+            game.figaroSound.pause();
+            game.czarSound.pause();
             mode = 3
         }
     }

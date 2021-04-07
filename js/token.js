@@ -26,7 +26,7 @@ class Token {
     }
 
     draw() {
-        this.x--;
+        this.x -= 3;
         image(this.image, this.x, this.y, this.width, this.height);
     }
 }
