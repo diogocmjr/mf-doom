@@ -2,7 +2,7 @@ class Token {
     constructor(image) {
         this.image = image;
         this.x = width;
-        this.y = (Math.random() * height + 100); // => 1.5 distributes obstacles more than if it was 3
+        this.y = (Math.random() * 450) + 50; // => 1.5 distributes obstacles more than if it was 3
         this.width = 55;
         this.height = 55;
     }

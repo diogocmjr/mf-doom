@@ -46,4 +46,11 @@ class Player {
     moveLeft() {
         this.x -= 3;
     }
+
+    gameOver() {
+        if (game.player.lives.length < 1) {
+            console.log('game is over')
+            mode = 3
+        }
+    }
 }

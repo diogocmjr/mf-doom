@@ -9,11 +9,14 @@ class Background {
             image(img.src, img.x, 0, width, height)
             image(img.src, img.x + width, 0, width, height)
             // console.log(this.counter)
-            if (img.x <= -width && this.counter <= 10) {
+            if (img.x <= -width) {
+                // console.log(this.counter)
                 img.x = 0;
-                img.speed = 0;
-                this.counter++
             }
+            if (this.counter >= 5000) {
+                img.speed = 0;
+            }
+            this.counter++
         })
     }
 }

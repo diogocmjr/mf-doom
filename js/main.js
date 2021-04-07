@@ -12,10 +12,7 @@ function setup() {
 }
 function draw() {
     game.draw();
-}
-
-function pauseGame() {
-    game.draw = !game.draw;
+    game.player.gameOver();
 }
 
 function keyPressed() {
@@ -36,5 +33,9 @@ function keyPressed() {
     }
     if (keyCode === 80) {
         mode = 2;
+    }
+    if (keyCode === 82) {
+        game.reset();
+        mode = 0;
     }
 }

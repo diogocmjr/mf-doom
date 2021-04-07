@@ -33,9 +33,8 @@ class Game {
 
         if (mode==0) {
             background(this.menuImage);
-            textAlign (CENTER);
             textSize (40);
-            text('Press "Enter" to Start', 500, 470);
+            text('Press "Enter" to Start', 300, 420);
             fill(256, 256, 256);
         }
 
@@ -74,7 +73,7 @@ class Game {
             })
 
             textSize(32)
-            text(`${this.player.lives.join(' ')}`, 20, 45)
+            text(`${this.player.lives.join(' ')}`, 30, 45)
             fill(255, 255, 255)
     
             textSize(32)
@@ -82,14 +81,20 @@ class Game {
             fill(255, 255, 255)
         }
 
-        else if (mode==2) {
+        if (mode==2) {
             background('rgba(256, 256, 256, 0.5)');
-            text('Press "Enter" to resume', 500, 400);
+            text('Press "Enter" to resume', 320, 350);
             fill(0, 0, 0)
         }
 
         if (mode==3) {
-            text('GAME OVER', 500, 300);
+            text('GAME OVER', 300, 420);
+            fill(0, 0, 0)        
         }
+    }
+
+    reset() {
+        this.player.lives = ['♡', '♡', '♡'];
+        this.score = 0;
     }
 }
