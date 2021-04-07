@@ -16,26 +16,32 @@ function draw() {
 }
 
 function keyPressed() {
-    if (keyCode === 40) {
-        game.player.moveUp();
-    }
     if (keyCode === 38) {
+        game.player.moveUp();
+        game.upSound.play();
+    }
+    if (keyCode === 40) {
         game.player.moveDown();
+        game.downSound.play();
     }
     if (keyCode === 39) {
         game.player.moveRight();
+        game.rightSound.play();
     }
     if (keyCode === 37) {
         game.player.moveLeft();
+        game.leftSound.play();
     }
     if (keyCode === 13) {
         mode = 1;
+        game.mainSound.play();
+
     }
     if (keyCode === 80) {
         mode = 2;
+        game.mainSound.pause();
     }
     if (keyCode === 82) {
-        game.reset();
-        mode = 0;
+        window.location.reload(1)
     }
 }

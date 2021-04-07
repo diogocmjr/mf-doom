@@ -13,7 +13,7 @@ class Background {
                 // console.log(this.counter)
                 img.x = 0;
             }
-            if (this.counter >= 5000) {
+            if (this.counter >= 2000) {
                 img.speed = 0;
             }
             this.counter++

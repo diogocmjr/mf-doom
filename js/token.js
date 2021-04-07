@@ -19,6 +19,7 @@ class Token {
         if (dist(tokenX, tokenY, playerX, playerY) > 97) {
             return false;
         } else {
+            game.figaroSound.play();
             game.player.score += 10;
             return true;
         }

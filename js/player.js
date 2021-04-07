@@ -3,8 +3,8 @@ class Player {
     constructor() {
         this.lives = ['♡', '♡', '♡'];
         this.score = 0;
-        this.width = 110;
-        this.height = 130;
+        this.width = 115;
+        this.height = 135;
         this.x = 25;
         this.y = 450;
     }
@@ -20,10 +20,10 @@ class Player {
 
         image(game.playerImage, this.x, this.y, this.width, this.height);
 
-        if (keyIsDown(40)) {
+        if (keyIsDown(38)) {
             this.moveUp()
         }
-        if (keyIsDown(38)) {
+        if (keyIsDown(40)) {
             this.moveDown()
         }
         if (keyIsDown(37)) {
@@ -35,10 +35,10 @@ class Player {
     }
 
     moveUp() {
-        this.y += 3;
+        this.y -= 3;
     }
     moveDown() {
-        this.y -= 3;
+        this.y += 3;
     }
     moveRight() {
         this.x += 3;
@@ -49,7 +49,8 @@ class Player {
 
     gameOver() {
         if (game.player.lives.length < 1) {
-            console.log('game is over')
+            // console.log('game is over')
+            game.mainSound.pause();
             mode = 3
         }
     }

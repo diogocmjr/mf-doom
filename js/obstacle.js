@@ -19,6 +19,7 @@ class Obstacle {
         if (dist(obstacleX, obstacleY, playerX, playerY) > 99) {
             return false;
         } else {
+            game.czarSound.play();
             game.player.lives.pop();
             return true;
         }
