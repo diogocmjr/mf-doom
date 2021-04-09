@@ -2,8 +2,8 @@ class Hostage {
     constructor() {
         this.width = 150;
         this.height = 180;
-        this.x = 818;
-        this.y = 418;
+        this.x = 820;
+        this.y = 415;
     }
 
     collision(playerInfo) {
@@ -15,7 +15,7 @@ class Hostage {
     
 
     // then use the P5 function dist() to calculate the distance
-        if (dist(hostageX, hostageY, playerX, playerY) > 97) {
+        if (dist(hostageX, hostageY, playerX, playerY) > 50) {
             return false;
         } else {
             game.omgSound.play();

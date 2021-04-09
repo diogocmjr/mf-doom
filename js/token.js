@@ -2,7 +2,7 @@ class Token {
     constructor(image) {
         this.image = image;
         this.x = width;
-        this.y = (Math.random() * 450) + 50; // => 1.5 distributes obstacles more than if it was 3
+        this.y = (Math.random() * 450) + 55; // => 1.5 distributes obstacles more than if it was 3
         this.width = 55;
         this.height = 55;
     }
@@ -20,7 +20,7 @@ class Token {
             return false;
         } else {
             game.figaroSound.play();
-            game.player.score += 10;
+            game.player.score += 1;
             return true;
         }
     }

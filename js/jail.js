@@ -2,7 +2,7 @@ class Jail {
     constructor() {
         this.width = 140;
         this.height = 601;
-        this.x = 820;
+        this.x = 825;
         this.y = -5;
     }
 

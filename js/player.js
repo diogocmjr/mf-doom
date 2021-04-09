@@ -1,7 +1,7 @@
 class Player {
 
     constructor() {
-        this.lives = ['♡', '♡', '♡'];
+        this.lives = 3;
         this.score = 0;
         this.width = 115;
         this.height = 135;
@@ -35,25 +35,29 @@ class Player {
     }
 
     moveUp() {
-        this.y -= 4;
+        this.y -= 3;
     }
     moveDown() {
-        this.y += 4;
+        this.y += 3;
     }
     moveRight() {
-        this.x += 4;
+        this.x += 3;
     }
     moveLeft() {
-        this.x -= 4;
+        this.x -= 3;
     }
 
     gameOver() {
-        if (game.player.lives.length < 1) {
+        if (game.player.lives < 1) {
             // console.log('game is over')
+            mode = 3;
             game.mainSound.pause();
             game.figaroSound.pause();
-            game.czarSound.pause();
-            mode = 3
+            game.chainSound.pause();
+            game.upSound.pause();
+            game.downSound.pause();
+            game.leftSound.pause();
+            game.rightSound.pause();
         }
     }
 }

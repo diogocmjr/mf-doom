@@ -3,12 +3,27 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-family: "Spartan", sans-serif;
+    font-family: 'VT323', monospace;
+    font-size: 60px;
+    margin-top: 40px;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
 
-div {
-  display: flex;
-  justify-content: center;
-  padding: 35px;
-}
+  .blink {
+    margin-bottom: 20px;
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
